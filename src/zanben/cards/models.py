@@ -6,7 +6,6 @@ class Input(models.Model):
     numCardsInCategory = models.IntegerField()
     numAtLeast = models.IntegerField()
     numDraws = models.IntegerField()
-    probs = models.FloatField()
 
 class InputForm(ModelForm):
     class Meta:
