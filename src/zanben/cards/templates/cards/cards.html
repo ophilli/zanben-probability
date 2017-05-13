@@ -4,9 +4,6 @@
 
 <form method="post" action="">
     {% csrf_token %}
-    <div>Deck Size: {{ form.deckSize }}</div>
-    <div>Number of Cards In Category: {{ form.numCardsInCategory }}</div>
-    <div>P ( X >= n): {{ form.numAtLeast }}</div>
-    <div>Number of Draw Attempts: {{ form.numDraws }}</div>
+    {{ form.as_table }}
     <input type="submit" value="equals" />
 </form>
