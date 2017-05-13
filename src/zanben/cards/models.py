@@ -2,7 +2,7 @@ from django.db import models
 from django.forms import ModelForm
 
 class Input(models.Model):
-    deckSize = models.IntegerField(max_length=10, blank=True)
+    deckSize = models.IntegerField()
     numCardsInCategory = models.IntegerField()
     numAtLeast = models.IntegerField()
     numDraws = models.IntegerField()
