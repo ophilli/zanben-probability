@@ -17,11 +17,11 @@ def index(request):
     return render(request,'cards/cards.html', {'form':form})
 
 def present_output(request, form):
-    deckSize = form.IntegerField(label='Size of the Deck')
-    inumCardsInCategory = form.numCardsInCategory
+    deckSize = form.deckSize
+    numCardsInCategory = form.numCardsInCategory
     numAtLeast = form.numAtLeast
     numDraws = form.numDraws
 
     prob = compute(deckSize, numCardsInCategory, numAtLeast, numDraws)
-
+    form.Prob = prob
     return render(request, 'cards/cards.html', {'form':form})
