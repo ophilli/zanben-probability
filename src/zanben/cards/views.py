@@ -11,17 +11,17 @@ def index(request):
         form = InputForm(request.POST)
         if form.is_valid():
             form = form.save(commit=False)
-            return present_output(request, form)
+            return present_output(form)
     else:
         form = InputForm()
     return render(request,'cards/cards.html', {'form':form})
 
-def present_output(request, form):
+def present_output(form):
     deckSize = form.deckSize
     numCardsInCategory = form.numCardsInCategory
     numAtLeast = form.numAtLeast
     numDraws = form.numDraws
 
     prob = compute(deckSize, numCardsInCategory, numAtLeast, numDraws)
-    form.Prob = prob
-    return render(request, 'cards/cards.html', {'form':form})
+
+    return HttpResponse("Deck Size: %s<br/>Number of Cards In Category: %s<br/>Draw at least: %s<br/>Number of Draws: %s<br/><br/>Probability: %s<br/>" % (deckSize, numCardsInCategory, numAtLeast, numDraws, prob))
