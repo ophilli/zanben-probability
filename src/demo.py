@@ -1,4 +1,4 @@
-# [Quora Background Info](https://www.quora.com/Three-cards-are-pulled-from-a-deck-of-52-cards-What-is-the-probability-of-getting-at-least-one-club)
+# (Quora Background Info)[https://www.quora.com/Three-cards-are-pulled-from-a-deck-of-52-cards-What-is-the-probability-of-getting-at-least-one-club]
 
 from scipy.special import comb
 
