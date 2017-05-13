@@ -1,0 +1,8 @@
+<form method="post" action="">
+    {% csrf_token %}
+    Deck Size: {{ form.deckSize }}<br/>
+    Number of Cards In Category: {{ form.numCardsInCategory }}<br/>
+    P ( X >= n): {{ form.numAtLeast }}<br/>
+    Number of Draw Attempts: {{ form.numDraws }}<br/>
+    <input type="submit" value="equals" />
+</form>
