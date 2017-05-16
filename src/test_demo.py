@@ -17,7 +17,7 @@ class TestDemos:
         assert demo.probFunc(52,13,2,-1) == 0
 
     def test_at_least_more_than_1(self):
-        """ Compare our values against startrek.com/online-calculator-hypergeometric.aspx """
+        """ Compare our values against stattrek.com/online-calculator/hypergeometric.aspx """
         assert abs(demo.probFunc(52,13,1,10) - 0.959813879728687) < 1e-6
         assert abs(demo.probFunc(52,13,2,10) - 0.785674025219665) < 1e-6
         assert abs(demo.probFunc(52,13,3,10) - 0.482333633494272) < 1e-6
